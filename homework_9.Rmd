@@ -1,0 +1,61 @@
+---
+title: "Homework 9"
+author: "Kimberly McNeil"
+date: "4/2/2026"
+output:
+  html_document:
+    code_folding: show
+linkcolor: blue
+urlcolor: blue
+---
+
+```{r setup, include=FALSE, echo=TRUE}
+# remember warning=FALSE and message=FALSE only when done
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(tidyverse)
+library(babynames)
+library(dplyr)
+```
+
+```{r}
+View(babynames)
+```
+
+
+## Proportion Percentages
+
+The following table showcases the first 6 rows of babynames with a new column that converts the prop column into percentages, rounded to two decimal places:^[Question 1 Complete]
+
+```{r}
+babynames_percent = babynames %>%
+  mutate(percent = round(prop * 100, 2))
+
+babynames_percent %>%
+  head() %>%
+  kable()
+```
+
+
+
+## Percentages per year
+
+
+
+
+## Custom Name and Sex
+
+
+
+
+## Sampling Five Rows
+
+
+
+
+## Flatten Strings
+
+
+
+
+## 
