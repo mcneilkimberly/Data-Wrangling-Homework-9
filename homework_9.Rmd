@@ -37,7 +37,6 @@ babynames_percent %>%
 ```
 
 
-
 ## Percentages per year
 
 The following table showcases the first 6 rows of the previous table with a new column that customizes the following string template: “PERCENT% in YEAR”:^[Question 2 Complete]
@@ -54,7 +53,7 @@ babynames_str %>%
 
 ## Custom Name and Sex
 
-The following table showcases the first 6 rows of the previous table filtered for those with the name "Kimberly" with a Sex of "F":
+The following table showcases the first 6 rows of the previous table filtered for those with the name "Kimberly" with a Sex of "F":^[Question 3 Complete]
 
 ```{r}
 name_filter = babynames_str %>%
@@ -69,6 +68,18 @@ name_filter %>%
 
 ## Sampling Five Rows
 
+The following table showcases five randomly selected observations, sorted chronologically:^[Question 4 Complete]
+
+```{r}
+set.seed(42)
+
+sampled_data = name_filter %>%
+  slice_sample(n = 5) %>%
+  arrange(year)
+
+sampled_data %>%
+  kable()
+```
 
 
 
