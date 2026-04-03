@@ -9,7 +9,7 @@ linkcolor: blue
 urlcolor: blue
 ---
 
-```{r setup, include=FALSE, echo=TRUE}
+```{r setup, include=FALSE, echo=TRUE, warning=FALSE, message=FALSE}
 # remember warning=FALSE and message=FALSE only when done
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
@@ -17,11 +17,6 @@ library(tidyverse)
 library(babynames)
 library(dplyr)
 ```
-
-```{r}
-View(babynames)
-```
-
 
 ## Proportion Percentages
 
@@ -95,8 +90,11 @@ str_view(flattened_string)
 ```
 
 
-
 ## Final Results
 
+```{r results = 'asis'}
+final_results = str_glue("Out of all Female names, the name Kimberly represented {flattened_string}.")
 
-
+cat(final_results)
+```
+^[Question 6 Complete]
