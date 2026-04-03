@@ -40,7 +40,16 @@ babynames_percent %>%
 
 ## Percentages per year
 
+The following table showcases the first 6 rows of the previous table with a new column that customizes the following string template: “PERCENT% in YEAR”:^[Question 2 Complete]
 
+```{r}
+babynames_str = babynames_percent %>%
+  mutate(percent_year = str_glue("{percent}% in {year}"))
+
+babynames_str %>%
+  head() %>%
+  kable()
+```
 
 
 ## Custom Name and Sex
@@ -58,4 +67,4 @@ babynames_percent %>%
 
 
 
-## 
+## Final Results
