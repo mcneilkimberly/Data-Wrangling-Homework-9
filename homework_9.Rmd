@@ -54,6 +54,16 @@ babynames_str %>%
 
 ## Custom Name and Sex
 
+The following table showcases the first 6 rows of the previous table filtered for those with the name "Kimberly" with a Sex of "F":
+
+```{r}
+name_filter = babynames_str %>%
+  filter(name == "Kimberly", sex == "F")
+
+name_filter %>%
+  head() %>%
+  kable()
+```
 
 
 
