@@ -37,7 +37,7 @@ babynames_percent %>%
 ```
 
 
-## Percentages per year
+## Percentages per Year
 
 The following table showcases the first 6 rows of the previous table with a new column that customizes the following string template: “PERCENT% in YEAR”:^[Question 2 Complete]
 
@@ -65,7 +65,6 @@ name_filter %>%
 ```
 
 
-
 ## Sampling Five Rows
 
 The following table showcases five randomly selected observations, sorted chronologically:^[Question 4 Complete]
@@ -82,10 +81,22 @@ sampled_data %>%
 ```
 
 
-
 ## Flatten Strings
 
+The following string showcases the previous five random rows' "percentage in year" strings from the Percentages per Year section flattened into a single string:^[Question 5 Complete]
+
+```{r}
+string_vector = sampled_data %>%
+  pull(percent_year)
+
+flattened_string = str_flatten(string_vector, ", ", last = ", and ")
+
+str_view(flattened_string)
+```
 
 
 
 ## Final Results
+
+
+
